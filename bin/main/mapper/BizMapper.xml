@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sunq.operation.dao.BizDao">
+
+	<select id="getAllAdmdiv" resultType="admdiv">
+		select
+		admdiv_code,admdiv_name from pb_sys_admdiv
+		where is_valid = 1
+	</select>
+	
+	<select id="getAllBizCode" resultType="reflectObject">
+		select
+		admdiv_code,reflect_code from pb_reflect_object
+		where is_enabled = 1 and admdiv_code = #{admdivCode}
+		order by reflect_code
+	</select>
+	
+	<select id="getAllMenu" resultType="menu">
+		select id,name from gap_menu
+		order by name
+	</select>
+	
+	<select id="getReflectObject" resultType="reflectObject">
+		select * from pb_reflect_object
+		where reflect_code = #{reflectCode} and admdiv_code = #{admdivCode}
+	</select>
+	
+	<select id="getReflectFields" resultType="reflectField">
+		select * from pb_reflect_field
+		where reflect_id = #{reflectId}
+		order by is_bill,field_order
+	</select>
+
+	<select id="getBizType" resultType="bizType">
+		select * from gap_biz_type 
+		where biz_type_code = #{bizCode} and admdiv_code = #{admdivCode}
+	</select>
+	
+	<select id="getBizTypeById" resultType="bizType">
+		select * from gap_biz_type 
+		where biz_type_id = #{bizId} and admdiv_code = #{admdivCode}
+	</select>
+	
+	<select id="getNoRule" resultType="noRule">
+		select * from gap_no_rule 
+		where no_rule_id = #{id}
+	</select>
+	
+	<select id="getBillType" resultType="billType">
+		select * from gap_bill_type 
+		where bill_type_id = #{id}
+	</select>
+	
+	<select id="getBormObject" resultType="bormObject">
+		select * from gap_borm_object 
+		where obj_id = #{objId}
+	</select>
+	
+	<select id="getBormAttr" resultType="bormAttr">
+		select * from gap_borm_objattr 
+		where obj_id = #{objId}
+	</select>
+	
+
+</mapper>

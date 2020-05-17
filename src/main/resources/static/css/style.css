@@ -1,0 +1,24 @@
+body{
+	margin-top:80px;
+}
+.brand-font{
+	size:56px;
+}
+.icon{
+  width: 16px;
+  height: 16px;
+}
+.icon-cog{
+  fill: #c0c0c0;
+}
+
+.mysql{
+	margin-top: 25px;
+	margin-left: 10px;
+}
+
+code{
+	color: #0000FF;
+	font-weight: bold;
+}
+

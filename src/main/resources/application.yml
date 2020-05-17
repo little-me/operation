@@ -1,0 +1,15 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: pb
+    password: 1
+    
+    
+#MyBatis 映射文件通配
+mybatis: 
+  mapper-locations: mapper/*.xml
+#MyBatis 扫描别名包，和注解@Alias 联用
+  type-aliases-package: com.sunq.operation.model
