@@ -10,4 +10,4 @@ The backend's code is already written particially, with nothing to show off. Whi
 因为最近在忙别的事，发出来大家一起搞。感兴趣的同事可以发Pull requests给我。
 后期可能会加上从报文反序列化成脚本。有问题可以一起探讨，renzhesunqiang@126.com
 
-Cause of wasting time for something else(pursuing girlfriend) recently, I'd share this and improve it with you. If it summons your inspirations, please send pull requests to me. I believe we can get more spark of minds and have a good cooperation. Email me at renzhesunqiang@126.com.
+Cause of wasting time for something else(pursuing girlfriend) recently, I'd share this and improve it with you. If it summons your inspirations, please send pull requests to me. I believe we can get more sparks of minds and have a good cooperation. Email me at renzhesunqiang@126.com.
